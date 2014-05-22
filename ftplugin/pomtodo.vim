@@ -7,12 +7,12 @@ let b:did_ftplugin = 1
 let s:cpo_save = &cpo
 set cpo&vim
 
-nnoremap <buffer> <silent> q :wq<cr>
-nnoremap <buffer> <silent> <esc> :wq<cr>
+"nnoremap <buffer> <silent> q :wq<cr>
+"nnoremap <buffer> <silent> <esc> :wq<cr>
 
 "this should be able to take a count:
 nnoremap <buffer> <silent> <cr> :<c-u>call PomodoroAddTickBox(v:count1)<cr>
-nnoremap <buffer> <silent> <space> :call PomodoroMarkTodoElapsed("X")<cr>
+nnoremap <buffer> <silent> <space> :call PomodoroStartOrFinish()<cr>
 nnoremap <buffer> <silent> - :call PomodoroMarkTodoElapsed("-")<cr>
 
 inoremap <buffer> [ [ ]

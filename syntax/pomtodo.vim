@@ -7,8 +7,8 @@ if exists("b:current_syntax")
 endif
 
 syn match pomComplete /.*/
-syn match pomTask /.*\(\[ ]\|( )\)/
-syn match pomEstimate /\[ ]/ contained containedin=pomTask,pomComplete
+syn match pomTask /.*\(\[[ _]]\|([ _])\)/
+syn match pomEstimate /\[[ _]]/ contained containedin=pomTask,pomComplete
 syn match pomElapsed /\[X]/ contained containedin=pomTask,pomComplete
 syn match pomNotNeeded /\[-]/ contained containedin=pomTask,pomComplete
 syn match pomExtra /(X)/ contained containedin=pomTask,pomComplete
