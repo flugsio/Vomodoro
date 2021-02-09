@@ -137,7 +137,7 @@ fu! s:PomodoroStartTimer()
     let save_cursor = getpos('.')
     if save_cursor[1] != 1
       call PomodoroMarkTodoElapsed("_")
-      exec ':0s/\v(Timer:)(.*)/\1 '.strftime('%Y-%m-%d %H:%M:%S'.'')
+      exec ':0s/\v(Timer:)(.*)/\1 '.system("date -u +'%Y-%m-%d %H:%M:%SZ'")
       call setpos('.', save_cursor)
       silent w
       call system('killall -USR1 i3status')
